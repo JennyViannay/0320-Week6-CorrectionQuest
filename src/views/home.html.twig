@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{title}}{% endblock %}
+{% block stylesheets %}
+    <style>
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+            background:#eee;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+        }
+
+        h1{
+            text-align:center;
+            font-weight:200;
+            margin:40px 0;
+        }
+    </style>
+{% endblock %}
+{% block body %}
+    <h1>Hello {{ title }} !</h1>
+    <!--3 cards on xl and very large screen and tablet, and 1 card on small screens-->
+    <div class="row row-cols-1 row-cols-md-3 row-cols-xl-3">
+        {% for product in products %}
+            <div class="col mb-4">
+                <div class="card">
+                    <h5 class="card-header">{{ product }}</h5>
+                    <img src="img/product.png" class="card-img-top" alt="my product !">
+                    <div class="card-body">
+                        <p class="card-text">The best products in the world !</p>
+                        <a href="#" class="btn btn-primary">Buy now !</a>
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            No product registred yet !
+        {% endfor %}
+    </div>
+{% endblock %}

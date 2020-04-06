@@ -1,0 +1,13 @@
+{
+    "name": "jenny/composer",
+    "authors": [
+        {
+            "name": "JennyViannay",
+            "email": "jenny.viannay75@gmail.com"
+        }
+    ],
+    "require": {
+        "ehime/hello-world": "^1.0",
+        "twig/twig": "^3.0"
+    }
+}
